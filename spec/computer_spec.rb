@@ -124,9 +124,10 @@ describe Computer do
 
 				comp.insert("PUSH", 20)
 				comp.insert("RET")
+				comp.set_address(20).insert("STOP")
 				comp.set_address(0).execute()
 
-				expect(comp.ptr).to eq(30)
+				expect(comp.ptr).to eq(21)
 			end
 		end
 
